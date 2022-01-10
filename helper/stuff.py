@@ -29,12 +29,12 @@ async def up(event):
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.reply(
-        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.",
+        f"Assalamu'alaikum `{ok.user.first_name}`\nBe chus video compress bot.\nBe kre videok size kam quality kharab krne warai\nBaye deme be screnshot te video te.",
         buttons=[
-            [Button.inline("HELP", data="ihelp")],
+            [Button.inline("MADAD", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/CompressorBot"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("BAKI BOTS", url="https://t.me/kashir_bots"),
+                Button.url("DEVELOPER", url="t.me/kashmir_1"),
             ],
         ],
     )
@@ -42,26 +42,26 @@ async def start(event):
 
 async def help(event):
     await event.reply(
-        "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options"
+        "**🐠  Quality CompressorBot**\n\n+KRE TUHIND VIDEO COMPRESS QUALITY KHRAB GAXENEY WARAIY.\n+BE HAKE DETH Compressed SAMPLE Video\n+be chus shhal istamaal krun\n-Quality Settings MUJUB mai chu lgn time Compress karnas.\nAARAM SAAN Soz video ake ake mtlb yele1 mkle pure compress gaxeth aday soze byakh video.\nspam ne baya kyanh.\n\nvideo soaz yakr forward  te yenay options"
     )
 
 
 async def ihelp(event):
     await event.edit(
-        "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Screenshots Too\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options",
-        buttons=[Button.inline("BACK", data="beck")],
+        "**🐠  Quality CompressorBot**\n\n+KRE TUHIND VIDEO COMPRESS QUALITY KHRAB GAXENEY WARAIY.\n+BE HAKE DETH Compressed SAMPLE Video\n+Screenshots Te deme\n+be chus shhal istamaal krun\n--Quality Settings MUJUB mai chu lgn time Compress karnas.\nAARAM SAAN Soz video ake ake mtlb yele1 mkle pure compress gaxeth aday soze byakh video.\nspam ne baya kyanh.\n\nvideo soaz yakr forward  te yenay options",
+        buttons=[Button.inline("WAPAS", data="beck")],
     )
 
 
 async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
-        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.",
+        f"Assalamu'alaikum `{ok.user.first_name}`\nBE CHUS VIDEO COMPRESS BOT.\nTE KRE TUHIND VIDEO COMPRESS QUALITY KHRAB GAXENEY WARAIY\nbaye deme screenshot te sample video te.",
         buttons=[
-            [Button.inline("HELP", data="ihelp")],
+            [Button.inline("MADAD", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("BAKI BOTS", url="https://t.me/kashir_bots"),
+                Button.url("DEVELOPER", url="t.me/kashmir_1"),
             ],
         ],
     )
@@ -73,8 +73,8 @@ async def sencc(e):
         "Choose Mode",
         buttons=[
             [
-                Button.inline("Default Compress", data=f"encc{key}"),
-                Button.inline("Custom Compress", data=f"ccom{key}"),
+                Button.inline("MYANNE HISAB", data=f"encc{key}"),
+                Button.inline("TUNDE HISAB", data=f"ccom{key}"),
             ],
             [Button.inline("Back", data=f"back{key}")],
         ],
@@ -84,7 +84,7 @@ async def sencc(e):
 async def back(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "🐠  **What To Do** 🐠",
+        "🐠  **BE KYA KRE** 🐠",
         buttons=[
             [
                 Button.inline("GENERATE SAMPLE", data=f"gsmpl{key}"),
@@ -111,7 +111,7 @@ async def ccom(e):
             g = repl.text + ".mkv"
         outt = f"encode/{chat}/{g}"
         x = await repl.reply(
-            f"Custom File Name : {g}\n\nSend Thumbnail Picture For it."
+            f"Wanevhaz naav kya thavo : {g}\n\nSOAZ Thumbnail Picture AME KHATRE."
         )
         replyy = cv.wait_event(events.NewMessage(from_users=chat))
         rep = await replyy
