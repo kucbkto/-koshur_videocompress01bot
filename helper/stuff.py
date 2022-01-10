@@ -29,7 +29,7 @@ async def up(event):
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.reply(
-        f"Assalamu'alaikum `{ok.user.first_name}`\nBe chus video compress bot.\nBe kre videok size kam quality kharab krne warai\nBaye deme be screnshot te video te.",
+        f"Assalamu'alaikum `{ok.user.first_name}`\nBe chus video compress bot.\nBe kre videok size kam quality kharab krne warai\nBaye deme be screnshot te SAMPLE video te.",
         buttons=[
             [Button.inline("MADAD", data="ihelp")],
             [
